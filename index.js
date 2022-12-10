@@ -44,12 +44,29 @@ function Conversion(point,Name){
 function Reverse(Ans){
 
 let ans='';
+// here We Are Adding A New Variable Becasue Of FOUR 0000 Numbers Which Are We Gonna Add This Number In Order To Get perfect Solution
+let bit='';
 for(let i=Ans.length-1 ;i>=0;i--){
    
 ans=ans+Ans[i];
 }
-
-OutputShow.innerText=ans;
+if(ans.length==1){
+bit='000'+ans
+// console.log(bit);
+OutputShow.innerText=bit;
+}
+else if(ans.length==2){
+    bit='00'+ans;
+    OutputShow.innerText=bit;
+}
+else if(ans.length==3){
+    bit='0'+ans;
+    OutputShow.innerText=bit;
+}
+else {
+    OutputShow.innerText=ans;
+}
+// OutputShow.innerText=ans;
 
 }
 function Reset(){
